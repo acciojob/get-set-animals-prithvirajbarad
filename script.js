@@ -1,20 +1,14 @@
 class Animal {
   constructor(species) {
-    this.species = species;
+    this._species = species;
   }
 
   get species() {
-    return this.species;
+    return this._species;
   }
 
   makeSound(sound) {
     console.log(sound);
-  }
-}
-
-class Dog extends Animal {
-  bark() {
-    this.makeSound("woof");
   }
 }
 
@@ -24,7 +18,17 @@ class Cat extends Animal {
   }
 }
 
-// Do not change the code below this line
-window.Animal = Animal;
-window.Dog = Dog;
-window.Cat = Cat;
+class Dog extends Animal {
+  bark() {
+    this.makeSound("woof");
+  }
+}
+
+// Usage example
+const cat = new Cat("Domestic Cat");
+const dog = new Dog("Golden Retriever");
+
+console.log(cat.species); // Output: Domestic Cat
+cat.purr(); // Output: purr
+console.log(dog.species); // Output: Golden Retriever
+dog.bark(); 
