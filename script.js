@@ -8,7 +8,7 @@ class Animal {
   }
 
   makeSound() {
-    console.log("Animal sound");
+    console.log("The " + this.species + " makes a sound");
   }
 }
 
@@ -23,12 +23,22 @@ class Dog extends Animal {
     console.log("woof");
   }
 }
-const cat = new Cat("Domestic Cat");
-console.log("Species: " + cat.species);
-cat.makeSound();
+
+const animal = new Animal("Unknown");
+console.log(animal.species); 
+animal.makeSound(); 
+
+const cat = new Cat("Cat");
+console.log(cat.species); 
+cat.makeSound(); 
 cat.purr();
 
-const dog = new Dog("Golden Retriever");
-console.log("Species: " + dog.species);
-dog.makeSound();
-dog.bark();
+const dog = new Dog("Dog");
+console.log(dog.species); 
+dog.makeSound(); 
+dog.bark(); 
+
+// Do not change the code below this line
+window.Animal = Animal;
+window.Dog = Dog;
+window.Cat = Cat;
