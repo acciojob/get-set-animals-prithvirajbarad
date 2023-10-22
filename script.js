@@ -23,13 +23,12 @@ class Dog extends Animal {
     console.log("woof");
   }
 }
-
 const cat = new Cat("Domestic Cat");
-console.log("Species: " + cat.species); // Accessing the getter
-cat.makeSound(); // Call the method inherited from Animal class
-cat.purr(); // Call the purr method specific to Cat class
+console.log("Species: " + cat.species);
+cat.makeSound();
+cat.purr();
 
 const dog = new Dog("Golden Retriever");
-console.log("Species: " + dog.species); // Accessing the getter
-dog.makeSound(); // Call the method inherited from Animal class
-dog.bark(); // Call the bark meth
+console.log("Species: " + dog.species);
+dog.makeSound();
+dog.bark();
