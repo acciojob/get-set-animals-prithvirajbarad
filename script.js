@@ -23,3 +23,6 @@ class Dog extends Animal {
     console.log("woof");
   }
 }
+
+cat.makeSound(); // Call the method inherited from Animal class
+cat.purr();
